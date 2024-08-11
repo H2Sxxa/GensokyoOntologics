@@ -123,7 +123,7 @@ public class DanmakuRecipe extends ShapedRecipe {
                 throw new JsonSyntaxException("Invalid key entry: ' ' is a reserved symbol.");
             }
 
-            map.put(entry.getKey(), Ingredient.deserialize(entry.getValue()));
+            map.put(entry.getKey(), Ingredient.fromJson(entry.getValue()));
         }
 
         map.put(" ", Ingredient.EMPTY);
